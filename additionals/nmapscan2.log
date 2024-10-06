@@ -1,0 +1,54 @@
+# Nmap 7.94SVN scan initiated Sun Oct  6 04:39:25 2024 as: /usr/lib/nmap/nmap -sS -sV -sC -A -T2 -p1-1000 -v -oN nmapscan2.log 10.15.42.245
+Nmap scan report for 10.15.42.245
+Host is up (0.15s latency).
+Not shown: 997 closed tcp ports (reset)
+PORT    STATE SERVICE VERSION
+21/tcp  open  ftp     vsftpd 3.0.5
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| -rw-r--r--    1 0        0          142834 Oct 04 19:41 list.xyz
+|_-rw-r--r--    1 0        0             701 Oct 03 17:41 readme.txt
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to ::ffff:10.33.13.67
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 1800
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 3
+|      vsFTPd 3.0.5 - secure, fast, stable
+|_End of status
+22/tcp  open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.11 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 2e:81:54:b8:0e:bc:73:4b:66:09:2b:aa:0d:63:c9:59 (RSA)
+|   256 0c:ff:27:69:2d:78:e8:05:5e:cb:69:dc:cc:26:79:73 (ECDSA)
+|_  256 e9:af:88:b7:62:f5:c6:52:25:1a:23:67:ab:49:6d:20 (ED25519)
+487/tcp open  http    nginx 1.18.0 (Ubuntu)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+|_http-title: Suka-Suka Zidan
+|_http-server-header: nginx/1.18.0 (Ubuntu)
+|_http-generator: WordPress 6.6.2
+Aggressive OS guesses: Linux 3.1 (95%), Linux 3.2 (95%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (95%), Linux 4.15 - 5.8 (94%), Linux 5.0 - 5.5 (94%), Linux 5.3 - 5.4 (94%), Linux 2.6.32 (94%), ASUS RT-N56U WAP (Linux 3.4) (93%), Linux 3.16 (93%), Linux 3.2 - 4.9 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 39.550 days (since Tue Aug 27 15:29:50 2024)
+Network Distance: 7 hops
+TCP Sequence Prediction: Difficulty=238 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 256/tcp)
+HOP RTT       ADDRESS
+1   113.31 ms 10.33.0.1
+2   47.31 ms  10.11.2.81
+3   ...
+4   84.52 ms  10.0.15.250
+5   78.56 ms  10.0.1.34
+6   68.59 ms  10.15.47.250
+7   158.90 ms 10.15.42.245
+
+Read data files from: /usr/share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Oct  6 04:41:45 2024 -- 1 IP address (1 host up) scanned in 140.08 seconds
